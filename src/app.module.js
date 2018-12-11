@@ -7,7 +7,7 @@ import './services/core.module';
 import './app.components';
 
 const appModule = angular
-	.module('angularjs-es6-starter-kit', [
+	.module('wes-data-hug', [
 		// shared module
 		'app.core',
 		// 3rd party modules
