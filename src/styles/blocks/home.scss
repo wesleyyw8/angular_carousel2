@@ -12,9 +12,9 @@
     }
   }
   .nav-link:not(.active) {
-    border: 1px solid grey;
+    border: 1px solid lightgrey;
     box-shadow: 0px 1px #888888;
-    
+
   }
   .nav-link.active{
     color: orange;
@@ -23,5 +23,31 @@
       background-color: orange;
       color: white;
     }
+  }
+  .test {
+    display: flex;
+  }
+  .home__container-sub-title {
+    display: flex;
+    padding-top: 20px;
+    .home__container-sub-title-text {
+      margin-left: 10px;
+      margin-top: -6px;
+    }
+  }
+  .home__container-tabs {
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      background-color: orange;
+      color: white;
+    }
+  }
+}
+.home__container {
+  .home__container-content {
+    background-color: red;
+    margin: 0 20%;
+    min-height: calc(100vh - 200px);
   }
 }
