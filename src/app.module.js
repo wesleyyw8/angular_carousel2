@@ -17,4 +17,14 @@ const appModule = angular
 		'app.home'
 	]);
 
+appModule.config(($stateProvider, $urlRouterProvider) => {
+  // var helloState = {
+  //   name: 'hello',
+  //   url: '/hello',
+  //   template: '<h3>hello world!</h3>'
+  // }
+  // $stateProvider.state(aboutState);
+  $urlRouterProvider.otherwise('/');
+});
+
 export default appModule;
