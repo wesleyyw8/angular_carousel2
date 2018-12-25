@@ -40,9 +40,16 @@
   .home__container-tabs {
     display: flex;
     justify-content: space-between;
+    .nav.nav-tabs {
+      font-size: 12px;
+    }
+    .nav-link {
+      padding: 0.6rem 1rem;
+    }
     .btn {
       background-color: orange;
       color: white;
+      font-size: 12px;
     }
   }
 }
