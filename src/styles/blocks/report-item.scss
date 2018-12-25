@@ -1,3 +1,29 @@
 .report-item-block {
   background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  i.fa.fa-file-o {
+    margin-left: 20px;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    align-self: flex-start;
+    margin-top: 3px;
+  }
+
+  i.fa.fa-ellipsis-v {
+    margin-left: 20px;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    align-self: flex-start;
+    margin-top: 10px;
+    color: darkgrey;
+  }
+
+  .report-item-block__user-name {
+    color: orange;
+  }
 }

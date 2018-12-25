@@ -1,6 +1,7 @@
 .home__container-sub-navbar {
   background-color: #f3f3f3;
-  padding: 0 20%;
+  padding: 0 10%;
+
   .nav-item {
     margin-bottom: -2px;
   }
@@ -24,12 +25,13 @@
       color: white;
     }
   }
-  .test {
-    display: flex;
-  }
+
   .home__container-sub-title {
     display: flex;
     padding-top: 20px;
+    i {
+      font-size: 25px;
+    }
     .home__container-sub-title-text {
       margin-left: 10px;
       margin-top: -6px;
@@ -46,8 +48,26 @@
 }
 .home__container {
   .home__container-content {
-    background-color: red;
-    margin: 0 20%;
+    margin: 10px 10%;
     min-height: calc(100vh - 200px);
+  }
+  .home__container-content__right-content {
+    background-color: #f3f3f3;
+    height: 80%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+  }
+  .btn.dropdown-toggle {
+    background-color: #f3f3f3;
+    border: 1px solid #d3d3d3;
+    line-height: 1.2;
+    font-size: 0.8rem;
+    color: dimgrey;
+    span {
+      color: lightgray;
+    }
+    &:after {
+      color: #6c757d;
+    }
   }
 }
