@@ -5,13 +5,21 @@
 			<div class="row mt-5">
 			  <div class="col-sm-3 offset-sm-5 text-right">
 			    <div class="dropdown">
-			      <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown">
-			      	<span>Sort by:</span> asdasda
+			      <button 
+			      class="btn dropdown-toggle" 
+			      type="button" 
+			      id="dropDownFilter" 
+			      data-toggle="dropdown">
+			      	<span>Sort by:</span> {{$ctrl.filterSelected}}
 			      </button>
-			      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-			        <button class="dropdown-item" type="button">Action</button>
-			        <button class="dropdown-item" type="button">Another action</button>
-			        <button class="dropdown-item" type="button">Something else here</button>
+			      <div class="dropdown-menu" aria-labelledby="dropDownFilter">
+			        <button 
+			        class="dropdown-item" 
+			        ng-repeat="dropdownItem in $ctrl.sortDropDownList"
+			        ng-click="$ctrl.filterSelected = dropdownItem.value"
+			        type="button">
+			        	{{dropdownItem.value}}
+			      	</button>
 			      </div>
 			    </div>
 			  </div>
