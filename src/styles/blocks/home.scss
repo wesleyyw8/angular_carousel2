@@ -1,6 +1,12 @@
 .home__container-sub-navbar {
   background-color: #f3f3f3;
   padding: 0 10%;
+  @media only screen and (max-width: 460px) {
+    padding: 0;
+    .home__container-sub-navbar-new-report-label {
+      display: none;
+    }
+  }
 
   .nav-item {
     margin-bottom: -2px;
