@@ -1,20 +1,28 @@
 export default class HomeController {
-	constructor($log) {
+	constructor(dataService) {
 		'ngInject';
 
-		this.$log = $log;
-	}
+    this.dataService = dataService;
+  }
 
-	$onInit = () => {
-		this.heading = ':D';
-		this.$log.info('Activated Home View.');
-    
-    this.sortDropDownList = [{
-      value: 'Owner'
-    }, {
-      value: 'Report Title'
-    }];
-    this.filterSelected = this.sortDropDownList[0].value;
+  $onInit = () => {
+    const loadDropDownList = () => {
+      this.sortDropDownList = [{
+        value: 'Owner'
+      }, {
+        value: 'Report Title'
+      }];
+      this.filterSelected = this.sortDropDownList[0].value;
+    }
 
-	};
+    const loadListReport = () => {
+      this.dataService.getReportList().then(data => {
+        this.reportList = data;
+      });
+    }
+
+    loadListReport();
+    loadDropDownList();
+  };
+
 }

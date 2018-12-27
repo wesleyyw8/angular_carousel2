@@ -5,6 +5,8 @@ export default {
   template: template,
   controller: ReportItemController,
   bindings: {
-    hero: '='
+    name: '=',
+    owner: '=',
+    lastUpdatedOn: '='
   }
 };

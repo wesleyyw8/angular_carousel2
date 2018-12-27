@@ -26,9 +26,12 @@
 			</div>
 		  <div class="row">
 		    <div class="col-sm-8">
-		      <report-item hero="'wesley222!'"></report-item>
-		      <report-item hero="'wesley222!'"></report-item>
-		      <report-item hero="'wesley222!'"></report-item>
+		      <report-item 
+		      	name="item.name"
+		      	owner="item.owner"
+		      	last-updated-on="item.lastUpdatedOn"
+		      	ng-repeat="item in $ctrl.reportList"
+		      ></report-item>
 		    </div>
 		    <div class="col-sm-4">
 		      <div class="home__container-content__right-content my-3"></div>
