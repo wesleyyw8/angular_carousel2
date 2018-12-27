@@ -3,6 +3,5 @@ import SubNavbarController from './sub-navbar.controller.js';
 
 export default {
   template: template,
-  controller: SubNavbarController,
-  bindings: {}
+  controller: SubNavbarController
 };
