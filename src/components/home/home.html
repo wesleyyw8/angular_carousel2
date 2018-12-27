@@ -16,7 +16,7 @@
 			        <button 
 			        class="dropdown-item" 
 			        ng-repeat="dropdownItem in $ctrl.sortDropDownList"
-			        ng-click="$ctrl.filterSelected = dropdownItem.value"
+			        ng-click="$ctrl.sortList(dropdownItem.value); dropdownItem.sort();"
 			        type="button">
 			        	{{dropdownItem.value}}
 			      	</button>
