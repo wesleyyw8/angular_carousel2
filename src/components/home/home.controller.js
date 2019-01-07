@@ -1,7 +1,8 @@
+import { sortReportListByOwner, sortReportListByReportTitle } from  './home.controller.helper';
+
 export default class HomeController {
 	constructor(dataService) {
 		'ngInject';
-
     this.dataService = dataService;
   }
 
@@ -10,16 +11,12 @@ export default class HomeController {
       this.sortDropDownList = [{
         value: 'Owner',
         sort: () => {
-          this.reportList.sort((a, b) => {
-            return a.owner < b.owner ? -1 : 1;
-          });
+          this.reportList = sortReportListByOwner(this.reportList);
         }
       }, {
         value: 'Report Title',
         sort: () => {
-          this.reportList.sort((a, b) => {
-            return a.name < b.name ? -1 : 1;
-          });
+          this.reportList = sortReportListByReportTitle(this.reportList);
         }
       }];
       this.filterSelected = this.sortDropDownList[0].value;
