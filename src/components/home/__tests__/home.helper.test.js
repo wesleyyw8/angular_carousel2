@@ -1,0 +1,11 @@
+import { sortReportListByOwner, sortReportListByReportTitle } from  '../home.controller.helper';
+import data from './data';
+
+describe('Home helpers', () => {
+  test('if sortReportListByOwner shorts the list alfabetically by the owner property', () => {
+    expect(sortReportListByOwner(data)).toEqual([{"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca95", "lastUpdatedOn": "2018-03-12T10:40:23.51Z", "name": "Sample list 4", "owner": "Chris Stone"}, {"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca97", "lastUpdatedOn": "2018-03-15T10:40:23.51Z", "name": "Sample list 2", "owner": "Jennifer Brady"}, {"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca98", "lastUpdatedOn": "2018-05-12T10:40:23.51Z", "name": "Sample list 1", "owner": "Jennifer Brady"}, {"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca99", "lastUpdatedOn": "2018-12-26T10:40:23.51Z", "name": "Sample list 7", "owner": "Jennifer Brady"}, {"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca96", "lastUpdatedOn": "2018-03-12T10:40:23.51Z", "name": "Sample list 3", "owner": "John Smith"}]);
+  });
+  test('if sortReportListByReportTitle shorts the list alfabetically by the title property', () => {
+    expect(sortReportListByReportTitle(data)).toEqual([{"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca98", "lastUpdatedOn": "2018-05-12T10:40:23.51Z", "name": "Sample list 1", "owner": "Jennifer Brady"}, {"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca97", "lastUpdatedOn": "2018-03-15T10:40:23.51Z", "name": "Sample list 2", "owner": "Jennifer Brady"}, {"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca96", "lastUpdatedOn": "2018-03-12T10:40:23.51Z", "name": "Sample list 3", "owner": "John Smith"}, {"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca95", "lastUpdatedOn": "2018-03-12T10:40:23.51Z", "name": "Sample list 4", "owner": "Chris Stone"}, {"createdOn": "2018-03-12T10:40:23.51Z", "id": "5aa659172114b00efc84ca99", "lastUpdatedOn": "2018-12-26T10:40:23.51Z", "name": "Sample list 7", "owner": "Jennifer Brady"}]);
+  });
+});
